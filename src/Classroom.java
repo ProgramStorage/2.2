@@ -35,8 +35,8 @@ public class Classroom {
 		for (Person p : this.students) {
 			if (p instanceof Student)
 			{
-				total += ((Student)p).getGPA();
-				}
+			total += ((Student)p).getGPA();
+			}
 			}	
 		return total/students.length;
 	}
