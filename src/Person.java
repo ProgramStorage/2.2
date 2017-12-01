@@ -1,56 +1,45 @@
-import java.awt.Color;
-import java.lang.Math;
-import java.util.Random;
-
-
 public abstract class Person {
 	
-	private static String firstName;
-	private static String familyName;
-	private Color eyeColor;
+	private String firstName;
+	private String familyName;
+	private int shoeSize;
 	private int IQ; 
 	
-	public Person(String firstName, String familyName, Color eyeColor, int IQ)
+	public Person(String firstName, String familyName, int shoeSize, int IQ)
 	{
-		Person.firstName = firstName;
-		Person.familyName = familyName;
-		this.eyeColor = eyeColor;
+		
+		this.firstName = firstName;
+		this.familyName = familyName;
+		this.shoeSize = shoeSize;
 		this.IQ = IQ;
 	}
+ 
 
-
-	public static String getFirstName() {
+	public String getFirstName() {
 		return firstName;
 	}
 
 	public void setFirstName(String firstName) {
-		Person.firstName = firstName;
+		this.firstName = firstName;
 	}
 
-	public static String getFamilyName() {
+	public String getFamilyName() {
 		return familyName; 
 	}
 
 	public void setFamilyName(String familyName) {
-		Person.familyName = familyName;
+		this.familyName = familyName;
 	}
 
-	public Color getEyeColor() {
-		Random r = new Random();
-		int red = r.nextInt(256);
-		int green = r.nextInt(256);
-		int blue = r.nextInt(256);
-
-		Color eyeColor = new Color(red,green,blue);
-		return eyeColor;
+	public int getShoeSize() {
+		return shoeSize;
 	}
 
-	public void setEyeColor(Color eyeColor) {
-		this.eyeColor = eyeColor;
+	public void setShoeSize(int shoeSize) {
+		this.shoeSize = shoeSize;
 	}
 
 	public int getIQ() {
-		IQ = (int)(Math.random() * 200 + 1);
 		return IQ;
 	}
 
