@@ -1,50 +1,41 @@
-import java.awt.Color;
-import java.lang.Math;
-import java.util.Random;
-
 public class Student extends Person{
 	private double GPA;
 	private int ACT;
 	private int APClasses;
 	
-	public Student(String firstName, String familyName, Color eyeColor, int IQ, double GPA, int ACT, int APClasses) {
-		super(firstName, familyName, eyeColor, IQ);
+	public Student(String firstName, String familyName, int shoeSize, int IQ, double GPA, int ACT, int APClasses) {
+		super(firstName, familyName, shoeSize, IQ);
 		this.ACT = ACT;
 		this.GPA = GPA;
 		this.APClasses = APClasses;
 	}
-	public void setGPA(double gPA) {
-		GPA = gPA;
+	public void setGPA(double GPA) {
+		this.GPA = GPA;
 	}
-	public void setACT(int aCT) {
-		ACT = aCT;
+	public void setACT(int ACT) {
+		this.ACT = ACT;
 	}
 	public void setAPClasses(int aPClasses) {
-		APClasses = aPClasses;
+		this.APClasses = aPClasses;
 	}
-	private int getACT() { 
-		// act 1-36
-		ACT = (int)(Math.random())*36+1;
-			return ACT;
+	public int getACT() { 
+		return ACT;
 	}
 
-	private int getAPClasses() {
-		//highest # of AP classes is 10
-		APClasses = (int)(Math.random()*11);
+	public int getAPClasses() {
 		return APClasses;
 	}
 
 	
-	public static double getGPA() {
-		Random r = new Random();
-		//highest gpa is 100 x 1.1 which is 110
-		double GPA = (r.nextInt(1210)) / 10;
+	public double getGPA() {
 		return GPA;
 	}
-
+	
+	@Override
 	public String toString() {
 		return getFamilyName() +"," + getFirstName();
 		
 	}
 	
 }
+
