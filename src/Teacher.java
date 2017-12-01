@@ -1,14 +1,11 @@
-import java.awt.Color;
-import java.util.Random;
-
 public class Teacher extends Person{
 	
 	private String subject;
 	private String title;
 	
-	public Teacher(String firstName, String familyName, Color eyeColor, int IQ, String subject, String title) 
+	public Teacher(String firstName, String familyName, int shoeSize, int IQ, String subject, String title) 
 	{
-		super(firstName, familyName, eyeColor, IQ);
+		super(firstName, familyName, shoeSize, IQ);
 		this.subject = subject;
 		this.title = title;
 	}
@@ -29,8 +26,9 @@ public class Teacher extends Person{
 		this.title = title;
 	}
 	
+	@Override
 	public String toString() {
-		return title +"."+ getFamilyName();
+		return getTitle() +"." + " "+ getFamilyName();
 	}
 
 }
