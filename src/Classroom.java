@@ -1,33 +1,48 @@
-import java.awt.Color;
-
 public class Classroom {
+	Person[] students;
+	Person teacher;
 	
-	private Person[] students;
-	private Person teacher;
-	
-	public Classroom(String firstName, String familyName, Color eyeColor, int IQ, Person[] students, Person teacher) {
+	public Classroom(Person[] students, Person teacher)
+	{
 		this.students = students;
 		this.teacher = teacher;
 	}
-	
-	public String getSubject() {
-		return ((Teacher) teacher).getSubject();	 
+
+	public Person[] getStudents() {
+		return students;
+	}
+
+	public void setStudents(Person[] students) {
+		this.students = students;
+	}
+
+	public Person getTeacher() {
+		return teacher;
+	}
+
+	public void setTeacher(Person teacher) {
+		this.teacher = teacher;
 	}
 	
-	public double classAverage() {
+	public String getSubject()
+	{
+		return ((Teacher)this.teacher).getSubject();
+	}
+
+	public double classAverage()
+	{
 		double total = 0.0;
-		for(Person p : this.students) {
-			if (p instanceof Student) {
-				total += Student.getGPA();
+		for (Person p : this.students) {
+			if (p instanceof Student)
+			{
+				total += ((Student)p).getGPA();
 				}
-			}
+			}	
 		return total/students.length;
-		
 	}
 	
-	public String printClass() {
-		return teacher + getSubject() + students;
-		
+	public void printClass(Person[] students, Person teacher)
+	{
+		System.out.println(((Teacher)teacher).toString() + getSubject() + getStudents());
 	}
-	
 }
