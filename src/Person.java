@@ -1,16 +1,17 @@
+
 public abstract class Person {
 	
 	private String firstName;
 	private String familyName;
-	private int shoeSize;
+	private int height;
 	private int IQ; 
 	
-	public Person(String firstName, String familyName, int shoeSize, int IQ)
+	public Person(String firstName, String familyName, int height, int IQ)
 	{
 		
 		this.firstName = firstName;
 		this.familyName = familyName;
-		this.shoeSize = shoeSize;
+		this.height = height;
 		this.IQ = IQ;
 	}
  
@@ -31,12 +32,12 @@ public abstract class Person {
 		this.familyName = familyName;
 	}
 
-	public int getShoeSize() {
-		return shoeSize;
+	public int getHeight() {
+		return height;
 	}
 
-	public void setShoeSize(int shoeSize) {
-		this.shoeSize = shoeSize;
+	public void setHeight(int height) {
+		this.height = height;
 	}
 
 	public int getIQ() {
