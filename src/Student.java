@@ -3,8 +3,8 @@ public class Student extends Person{
 	private int ACT;
 	private int APClasses;
 	
-	public Student(String firstName, String familyName, int shoeSize, int IQ, double GPA, int ACT, int APClasses) {
-		super(firstName, familyName, shoeSize, IQ);
+	public Student(String firstName, String familyName, int height, int IQ, double GPA, int ACT, int APClasses) {
+		super(firstName, familyName, height, IQ);
 		this.ACT = ACT;
 		this.GPA = GPA;
 		this.APClasses = APClasses;
