@@ -3,9 +3,9 @@ public class Teacher extends Person{
 	private String subject;
 	private String title;
 	
-	public Teacher(String firstName, String familyName, int shoeSize, int IQ, String subject, String title) 
+	public Teacher(String firstName, String familyName, int height, int IQ, String subject, String title) 
 	{
-		super(firstName, familyName, shoeSize, IQ);
+		super(firstName, familyName, height, IQ);
 		this.subject = subject;
 		this.title = title;
 	}
